@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vivian Portfolio - Products</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Navigation */
+    nav {
+      background: #222;
+      color: #fff;
+      padding: 0.8rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #0c0909;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s, border-bottom 0.3s;
+      padding-bottom: 0.2rem;
+    }
+
+    nav ul li a:hover {
+      color: #ff9800;
+      border-bottom: 2px solid #ff9800;
+    }
+
+    /* Mobile Menu */
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+        background: #333;
+        padding: 1rem;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+        color: #fff;
+      }
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: linear-gradient(to right, #ff9800, #ff5722);
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+    }
+
+    /* Products Section */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 2rem;
+      flex: 1;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .card-content h2 {
+      color: #ff5722;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-content button {
+      background: #ff5722;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .card-content button:hover {
+      background: #e64a19;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    footer .footer-links {
+      margin-bottom: 1rem;
+    }
+
+    footer .footer-links a {
+      color: #ccc;
+      margin: 0 0.8rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer .footer-links a:hover {
+      color: #ff9800;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">
+  <a href="index.html">
+    <img src="images/logo1.jpeg" alt="Vivian Portfolio Logo" style="height:50px;">
+  </a>
+</div>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="vivianproductpage.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Our Services & Products</h1>
+    <p>Explore our solutions crafted to help your digital journey succeed.</p>
+  </header>
+
+  <!-- Products -->
+  <section class="products">
+    <div class="card">
+  <img src="images/website development.jpg" alt="Web Development">
+  <div class="card-content">
+        <h2>Website Development</h2>
+        <p>Responsive and functional websites tailored to your needs.</p>
+        <button>Request Service</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src=images/maintenance.jpg alt="Website Maintenance">
+      <div class="card-content">
+        <h2>Website Maintenance</h2>
+        <p>Keep your site updated, secure, and running smoothly.</p>
+        <button>Request Service</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src=images/consulting-professional-expert-service-business.jpg alt="Consultation">
+      <div class="card-content">
+        <h2>Consultation</h2>
+        <p>Get expert advice to kickstart your online presence.</p>
+        <button>Request Service</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src=images/web-design-concepts-with-blurred-background.jpg alt="Consultation" alt="Web Design">
+      <div class="card-content">
+        <h2>Web Design</h2>
+        <p>Clean and attractive layouts designed to impress your audience.</p>
+        <button>Request Service</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src=images/wesite-audit.jpg alt="Website Audit">
+      <div class="card-content">
+        <h2>Website Audit</h2>
+        <p>Review and improve your site for performance and security.</p>
+        <button>Request Service</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src=images/It-training.jpg  alt="IT Training">
+      <div class="card-content">
+        <h2>IT Training</h2>
+        <p>Hands-on IT courses to boost your skills and career prospects.</p>
+        <button>Request Service</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a> |
+      <a href="about.html">About us</a> |
+      <a href="vivianproductpage.html">Products</a> |
+      <a href="contact.html">Contat Us</a> |
+      <a href="faq.html">FAQ</a> |
+      <a href="terms.html">Terms</a>
+    </div>
+    <p>&copy; 2025 Vivian Portfolio. Built with ❤️ for real-world solutions.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
